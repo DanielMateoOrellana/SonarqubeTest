@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Daniel Rules"
+    xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+
+    <description>Code Inspection Lab, Daniel</description>
+
+    <!-- Rule for class naming conventions -->
+    <rule ref="category/java/codestyle.xml/ClassNamingConventions" />
+
+    <!-- Error Prone rules -->
+    <rule ref="category/java/errorprone.xml/BeanMembersShouldSerialize">
+        <priority>2</priority>
+    </rule>
+    <rule ref="category/java/errorprone.xml/UseLocaleWithCaseConversions" />
+
+    <!-- Documentation rule with ignored requirements -->
+    <rule ref="category/java/documentation.xml/CommentRequired">
+        <properties>
+            <!-- Ignore class comment requirement -->
+            <property name="classCommentRequirement" value="Ignored" />
+            <!-- Ignore header comment requirement -->
+            <property name="headerCommentRequirement" value="Ignored" />
+            <!-- Ignore field comment requirement -->
+            <property name="fieldCommentRequirement" value="Ignored" />
+        </properties>
+    </rule>
+
+</ruleset>
